@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JAWA Blog Aggregator</title>
+</head>
+<body>
+
+<h1>JAWA Blog Aggregator</h1>
+
+<input type="text" id="topic" placeholder="Enter topic">
+<button onclick="search()">Search</button>
+
+<div id="results"></div>
+
+<script>
+function search() {
+    let topic = document.getElementById("topic").value;
+
+    fetch("http://localhost:8080/search?topic=" + topic)
+        .then(res => res.json())
+        .then(data => {
+            let output = "";
+
+            data.forEach(item => {
+                output += `
+                    <div style="border:1px solid black; margin:10px; padding:10px;">
+                        <h2>${item.title}</h2>
+                        <p>${item.content}</p>
+                        <small>Source: ${item.source}</small>
+                    </div>
+                `;
+            });
+
+            document.getElementById("results").innerHTML = output;
+        });
+}
+</script>
+
+</body>
+</html>

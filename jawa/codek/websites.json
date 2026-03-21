@@ -1,0 +1,46 @@
+{
+  "websites": [
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia",
+      "enabled": true,
+      "apiUrl": "https://en.wikipedia.org/api/rest_v1/page/summary/",
+      "type": "wikipedia"
+    },
+    {
+      "id": "hackernews",
+      "name": "Hacker News",
+      "enabled": true,
+      "apiUrl": "https://hn.algolia.com/api/v1/search?query=",
+      "type": "hackernews"
+    },
+    {
+      "id": "stackoverflow",
+      "name": "Stack Overflow",
+      "enabled": true,
+      "apiUrl": "https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=activity&site=stackoverflow&title=",
+      "type": "stackoverflow"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "enabled": true,
+      "apiUrl": "https://api.github.com/search/repositories?q=",
+      "type": "github"
+    },
+    {
+      "id": "arxiv",
+      "name": "ArXiv",
+      "enabled": true,
+      "apiUrl": "https://export.arxiv.org/api/query?search_query=all:",
+      "type": "arxiv"
+    },
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "enabled": true,
+      "apiUrl": "https://www.reddit.com/search.json?q=",
+      "type": "reddit"
+    }
+  ]
+}
